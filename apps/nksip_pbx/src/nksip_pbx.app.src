@@ -1,0 +1,9 @@
+{application, nksip_pbx, [
+  {description, "NkSIP PBX Sample Application"},
+  {vsn, "0.6.0"},
+  {modules, []},
+  {registered, []},
+  {mod, {nksip_pbx_app, []}},
+  {applications, [kernel, stdlib, nksip]},
+  {env, []}
+]}.
