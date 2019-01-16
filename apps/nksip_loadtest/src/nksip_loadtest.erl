@@ -107,6 +107,6 @@ call(Opts) ->
     io:format("UAC+UAS INVITE+ACK+BYE UDP (~p% ok): ~p req/sec\n\n", [P4, R4]),
     {_, P5, R5} = launch([invite, tcp|Opts]),
     io:format("UAC+UAS INVITE+ACK+BYE TCP (~p% ok): ~p req/sec\n\n", [P5, R5]),
-    {_, P6, R6} = launch([invite, tls|Opts]),xc
+    {_, P6, R6} = launch([invite, tls|Opts]),
     io:format("UAC+UAS INVITE+ACK+BYE TLS (~p% ok): ~p req/sec\n\n\n\n", [P6, R6]),
     ok.
