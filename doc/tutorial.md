@@ -124,7 +124,7 @@ use `tls` transport. Note we must use `<` and `>` if including `uri` parameters 
 
 Both requests receive a 407 response, but the nksip_uac_auto_auth plugin takes the included password and generates a new request with the correct headers, that are accepted at the server.
 
-Let's register now both clients with the server. We use the option `contact` to tell NkSIP to include a valid _Contact_ header in the request, and the `meta` option to get the _Contact_ header from the response, to be sure the server has stored the contact:
+Let's register now both clients with the server. We use the option `contact` to tell NkSIP to include a valid _Contact_ header in the request, and the `get_meta` option to get the _Contact_ header from the response, to be sure the server has stored the contact:
 
 ```erlang
 9> nksip_uac:register(nksip_tutorial_client1, "sip:127.0.0.1",
@@ -137,7 +137,7 @@ Let's register now both clients with the server. We use the option `contact` to 
 We can check this second registration has worked. If we send a _REGISTER_ request with no _Contact_ header, the server will include one for each stored registration. This time, lets get all the header from the response using `all_headers` as field specification:
 
 ```erlang
-11> nksip_uac:register(nksip_tutorial_client2, "sips:127.0.0.1", [{sip_pass, "1234"}, {meta, [all_headers]}]).
+11> nksip_uac:register(nksip_tutorial_client2, "sips:127.0.0.1", [{sip_pass, "1234"}, {get_meta, [all_headers]}]).
 {ok,200,[{all_headers, [{<<"call-id">>, ...}]}]}
 ```
 
