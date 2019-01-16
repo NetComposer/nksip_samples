@@ -17,6 +17,16 @@ Extension|Description
 `(any)@nksip`|If this contact is registered, send the call to it
 `nksip`|Process the request in the proxy. Since we have not implemented callbacks `sip_invite/2`, `sip_options/2`, etc., all responses will be default responses as defined in `nksip_callbacks`). _REGISTER_ requests will be processed as configured when starting the Service
 
+
+First of all get a clone of this repository and start the tutorial application
+```
+> git clone https://github.com/NetComposer/nksip_samples
+> cd nksip_samples
+> make pbx
+```
+
+Now you can start registering endpoints and making calls.
+
 Feel free to use the functions `nksip_pbx:start_trace()` to start the trace of SIP messages to console or `nksip_pbx:loglevel/1` to change the console log level.
 
 Use the function `nksip_pbx:check_speed/1` to stop the automatic generation of

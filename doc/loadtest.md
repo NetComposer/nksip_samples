@@ -12,3 +12,10 @@ If offers two different test modes:
 Full test suites are available in `nksip_loadtest:full/0` and `nksip_loadtest:full/1`. More fine-grained tests can be started with `nksip_loadtest:launch/1`.
 
 The test is directed to a started NkSIP in the same host by default, but you can start this application and a listening server (using `nksip_loadtest_lib:start_server/0`) on another node and use the option `host` to send the requests to the remote node.
+
+You can start the application this way:
+```
+> git clone https://github.com/NetComposer/nksip_samples
+> cd nksip_samples
+> make shell
+```
