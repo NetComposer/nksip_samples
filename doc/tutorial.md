@@ -52,7 +52,7 @@ init(ChildSpecs) ->
 From now on, you could start tracing to see all SIP messages on the console, using 
 
 ```erlang
-4> nksip_trace:start_trace().
+4> nksip_tutorial:start_trace().
 ```
 
 Let's try now to send an _OPTIONS_ from client2 to client1 and from client1 to the server:
